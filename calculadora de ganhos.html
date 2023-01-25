@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="Utf-8">
+
+<h1> Calculadora de pacientes e ganhos semanais</h1>
+
+<script>
+
+	//Relação de pacientes do convênio.
+	var valorPacientesConvenio = 50;
+	var pacientesAgendadosConvenio = 50;
+	var pacientesConfirmadosConvenio = 40;
+	var pacientesDesistentesConvenio = pacientesAgendadosConvenio - pacientesConfirmadosConvenio;
+	var totalAReceberConvenio = pacientesConfirmadosConvenio * valorPacientesConvenio;
+
+	//Relação de pacientes para serviço social.
+	var valorPacienteSocial = 60;
+	var pacientesAgendadosSocial = 10;
+	var pacientesConfirmadosSocial = 7;
+	var pacientesDesistentesSocial = pacientesAgendadosSocial - pacientesConfirmadosSocial;
+	var totalAReceberSocial = pacientesConfirmadosSocial * valorPacienteSocial;
+
+	//Relação de pacientes para serviço particular.
+	var valorPacienteParticular = 150;
+	var pacientesAgendadosParticular = 15;
+	var pacientesConfirmadosParticular = 10;
+	var pacientesDesistentesParticular = pacientesAgendadosParticular - pacientesConfirmadosParticular;
+	var totalAReceberParticular = pacientesConfirmadosParticular * valorPacienteParticular;
+
+	//Cálculo sobre os totais de pacientes.
+	var totalPacientesConfirmados = pacientesConfirmadosConvenio + pacientesConfirmadosSocial + pacientesConfirmadosParticular;
+
+	var totalPacientesAgendados = pacientesAgendadosConvenio + pacientesAgendadosSocial + pacientesAgendadosParticular;
+
+	var totalPacientesDesistentes = pacientesDesistentesConvenio + pacientesDesistentesSocial + pacientesDesistentesParticular;
+
+	//Cálculo do valor líquido a receber.
+	var totalAReceber = totalAReceberConvenio + totalAReceberSocial + totalAReceberParticular;
+
+	//convênio
+	document.write("Valor cobrado por paciente do convênio = R$" + valorPacientesConvenio);
+	document.write("<br>");
+
+	document.write("Pacientes agendados pelo convênio = " + pacientesAgendadosConvenio);
+	document.write("<br>");
+
+	document.write("Pacientes do convênio confirmados = " + pacientesConfirmadosConvenio);
+	document.write("<br>");
+
+	document.write("Pacientes do convênio que desistiram = " + pacientesDesistentesConvenio);
+	document.write("<br>");
+	document.write("<br>");
+
+	//social
+	document.write("Valor cobrado para pacientes do serviço social = R$" + valorPacienteSocial);
+	document.write("<br>");
+
+	document.write("Pacientes agendados com valor social = " + pacientesAgendadosSocial);
+	document.write("<br>");
+
+	document.write("Pacientes com valor social confirmadors = " + pacientesConfirmadosSocial);
+	document.write("<br>");
+
+	document.write("Pacientes com valor social desistentes = " + pacientesDesistentesSocial);
+	document.write("<br>");
+	document.write("<br>");
+
+	//particular
+	document.write("Valor cobrado para pacientes particular = R$" + valorPacienteParticular);
+	document.write("<br>");
+
+	document.write("Pacientes agendados para serviço particular = " + pacientesAgendadosParticular);
+	document.write("<br>");
+
+	document.write("Pacientes para serviço particular confirmados = " + pacientesConfirmadosParticular);
+	document.write("<br>");
+
+	document.write("Pacientes do serviço particular que desistiram = " + pacientesDesistentesParticular);
+	document.write("<br>");
+	document.write("<br>");
+
+	//recebiveis
+	document.write("Valor total recebido = R$" + ((pacientesConfirmadosConvenio * valorPacientesConvenio) + (pacientesConfirmadosSocial * valorPacienteSocial) + (pacientesConfirmadosParticular * valorPacienteParticular)));
+
+</script>
