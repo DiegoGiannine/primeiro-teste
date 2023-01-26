@@ -5,6 +5,10 @@
 
 <script>
 
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
 	//Relação de pacientes do convênio.
 	var valorPacientesConvenio = 40;
 	var pacientesAgendadosConvenio = 40;
@@ -38,45 +42,45 @@
 
 	//convênio
 	document.write("Valor cobrado por paciente do convênio = R$" + valorPacientesConvenio);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes agendados pelo convênio = " + pacientesAgendadosConvenio);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes do convênio confirmados = " + pacientesConfirmadosConvenio);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes do convênio que desistiram = " + pacientesDesistentesConvenio);
-	document.write("<br>");
-	document.write("<br>");
+	pulaLinha();
+	pulaLinha();
 
 	//social
 	document.write("Valor cobrado para pacientes do serviço social = R$" + valorPacienteSocial);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes agendados com valor social = " + pacientesAgendadosSocial);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes com valor social confirmadors = " + pacientesConfirmadosSocial);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes com valor social desistentes = " + pacientesDesistentesSocial);
-	document.write("<br>");
-	document.write("<br>");
+	pulaLinha();
+	pulaLinha();
 
 	//particular
 	document.write("Valor cobrado para pacientes particular = R$" + valorPacienteParticular);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes agendados para serviço particular = " + pacientesAgendadosParticular);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes para serviço particular confirmados = " + pacientesConfirmadosParticular);
-	document.write("<br>");
+	pulaLinha();
 
 	document.write("Pacientes do serviço particular que desistiram = " + pacientesDesistentesParticular);
-	document.write("<br>");
-	document.write("<br>");
+	pulaLinha();
+	pulaLinha();6
 
 	//recebiveis
 	document.write("Valor total recebido = R$" + ((pacientesConfirmadosConvenio * valorPacientesConvenio) + (pacientesConfirmadosSocial * valorPacienteSocial) + (pacientesConfirmadosParticular * valorPacienteParticular)));
