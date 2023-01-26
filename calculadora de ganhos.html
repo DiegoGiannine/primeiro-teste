@@ -9,6 +9,12 @@
 		document.write("<br>");
 	}
 
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
 	//Relação de pacientes do convênio.
 	var valorPacientesConvenio = 40;
 	var pacientesAgendadosConvenio = 40;
@@ -41,48 +47,27 @@
 	var totalAReceber = totalAReceberConvenio + totalAReceberSocial + totalAReceberParticular;
 
 	//convênio
-	document.write("Valor cobrado por paciente do convênio = R$" + valorPacientesConvenio);
-	pulaLinha();
-
-	document.write("Pacientes agendados pelo convênio = " + pacientesAgendadosConvenio);
-	pulaLinha();
-
-	document.write("Pacientes do convênio confirmados = " + pacientesConfirmadosConvenio);
-	pulaLinha();
-
-	document.write("Pacientes do convênio que desistiram = " + pacientesDesistentesConvenio);
-	pulaLinha();
+	mostra("Valor cobrado por paciente do convênio = R$" + valorPacientesConvenio);
+	mostra("Pacientes agendados pelo convênio = " + pacientesAgendadosConvenio);
+	mostra("Pacientes do convênio confirmados = " + pacientesConfirmadosConvenio);
+	mostra("Pacientes do convênio que desistiram = " + pacientesDesistentesConvenio);
 	pulaLinha();
 
 	//social
-	document.write("Valor cobrado para pacientes do serviço social = R$" + valorPacienteSocial);
-	pulaLinha();
-
-	document.write("Pacientes agendados com valor social = " + pacientesAgendadosSocial);
-	pulaLinha();
-
-	document.write("Pacientes com valor social confirmadors = " + pacientesConfirmadosSocial);
-	pulaLinha();
-
-	document.write("Pacientes com valor social desistentes = " + pacientesDesistentesSocial);
-	pulaLinha();
+	mostra("Valor cobrado para pacientes do serviço social = R$" + valorPacienteSocial);
+	mostra("Pacientes agendados com valor social = " + pacientesAgendadosSocial);
+	mostra("Pacientes com valor social confirmadors = " + pacientesConfirmadosSocial);
+	mostra("Pacientes com valor social desistentes = " + pacientesDesistentesSocial);
 	pulaLinha();
 
 	//particular
-	document.write("Valor cobrado para pacientes particular = R$" + valorPacienteParticular);
+	mostra("Valor cobrado para pacientes particular = R$" + valorPacienteParticular);
+	mostra("Pacientes agendados para serviço particular = " + pacientesAgendadosParticular);
+	mostra("Pacientes para serviço particular confirmados = " + pacientesConfirmadosParticular);
+	mostra("Pacientes do serviço particular que desistiram = " + pacientesDesistentesParticular);
 	pulaLinha();
-
-	document.write("Pacientes agendados para serviço particular = " + pacientesAgendadosParticular);
-	pulaLinha();
-
-	document.write("Pacientes para serviço particular confirmados = " + pacientesConfirmadosParticular);
-	pulaLinha();
-
-	document.write("Pacientes do serviço particular que desistiram = " + pacientesDesistentesParticular);
-	pulaLinha();
-	pulaLinha();6
 
 	//recebiveis
-	document.write("Valor total recebido = R$" + ((pacientesConfirmadosConvenio * valorPacientesConvenio) + (pacientesConfirmadosSocial * valorPacienteSocial) + (pacientesConfirmadosParticular * valorPacienteParticular)));
+	mostra("Valor total recebido = R$" + ((pacientesConfirmadosConvenio * valorPacientesConvenio) + (pacientesConfirmadosSocial * valorPacienteSocial) + (pacientesConfirmadosParticular * valorPacienteParticular)));
 
 </script>
