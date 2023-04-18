@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaProgramasResolvidosSemanais(segundaFeira, tercaFeira, quartaFeira, quintaFeira, sextaFeira, sabado){
+
+		var quantidadeProgramasResolvidos = segundaFeira + tercaFeira + quartaFeira + quintaFeira + sextaFeira +sabado;
+		
+		var valorReceber = quantidadeProgramasResolvidos * 12
+
+						
+		mostra("A quantidade de programas resolvidos durante a semana " + semana + " são de " + quantidadeProgramasResolvidos);
+
+		if (valorReceber > 0)
+
+ 	mostra("Valor a receber é de R$ "  + valorReceber);
+
+ 	}
+
+	var semana = 1
+	calculaProgramasResolvidosSemanais(10, 9, 11, 8, 25, 10);
+				
+	var semana = 2
+	calculaProgramasResolvidosSemanais(8, 20, 40, 20, 40, 60);
+	
+					
+</script>
